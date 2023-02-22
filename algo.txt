@@ -1,0 +1,27 @@
+let sentence = prompt("Enter a sentence that ends with a point: ");
+
+let charCount = 0;
+let wordCount = 1;
+let vowelCount = 0;
+
+for (let i = 0; i < sentence.length; i++) {
+  let c = sentence[i];
+  if (c === ' ') {
+    wordCount++;
+  }
+  else if (c === '.') {
+    break;
+  }
+  else {
+    charCount++;
+    if (c === 'a' && c === 'e' && c === 'i' &&  c === 'o' && c === 'u' && c === 'A' && c === 'E'&&  c === 'I' &&
+     c === 'O' && c === 'U') 
+     {
+      vowelCount++;
+    }
+  }
+}
+
+console.log("Length of the sentence: " + charCount);
+console.log("Number of words in the sentence: " + wordCount);
+console.log("Number of vowels in the sentence: " + vowelCount);
